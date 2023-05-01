@@ -15,6 +15,7 @@ interface Login {
 }
 
 
+
 type NotesState = {
     notes: Notes[]
     loader:boolean
@@ -31,13 +32,19 @@ type DispatchType = (args: NotesAction) => NotesState
 
 
 type LoginState = {
-    isAuth : Boolean
+    isAuth : any
+    token: string
+}
+
+interface pay {
+    msg:string
+    token:string
 }
 
 
 type LoginAction = {
     type:String
-    payload:Login
+    payload:pay
 }
 
 

@@ -10,6 +10,7 @@ import {
 
 const initialState: LoginState = {
   isAuth: false,
+  token:""
 };
 
 const authReducer = (state = initialState, { type, payload }: LoginAction) => {
@@ -21,9 +22,9 @@ const authReducer = (state = initialState, { type, payload }: LoginAction) => {
     case POST_REGISTER_FALIURE:
       return { ...state };
     case POST_LOGIN_REQUEST:
-      return { ...state, isAuth:true };
-    case POST_LOGIN_SUCCESS:
       return { ...state };
+    case POST_LOGIN_SUCCESS:
+      return { ...state, isAuth:true, token: payload.token };
     case POST_LOGIN_FALIURE:
       return { ...state };
     default:

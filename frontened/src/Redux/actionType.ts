@@ -18,7 +18,7 @@ export const postLoginRequestAction = () => {
     return {type:POST_LOGIN_REQUEST}
 }
 
-export const postLoginSuccessAction = (payload:Login) => {
+export const postLoginSuccessAction = (payload:pay) => {
     return {type:POST_LOGIN_SUCCESS,payload}
 }
 

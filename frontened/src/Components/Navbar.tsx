@@ -6,6 +6,7 @@ function Navbar() {
   return <div className="navbar-main">
     <NavLink to="/login">Login</NavLink>
     <NavLink to="/register">Regsiter</NavLink>
+    <NavLink to="/notes">Notes</NavLink>
   </div>;
 }
 
